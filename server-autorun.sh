@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo checking for updates
 
 UpdateServer () {
