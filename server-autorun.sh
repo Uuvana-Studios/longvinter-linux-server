@@ -5,7 +5,7 @@ UpdateServer () {
 	killall LongvinterServer.sh
         echo "Server closed, now getting latest version"
         sudo git restore .
-        sudo git pull "https://jalsson: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@github.com/Uuvana-Studios/longvinter-linux-server.git" main
+        sudo git pull
         sleep 1
         echo "Starting server.."
         sudo chmod -R ugo+rwx /home/nilsson/longvinter-linux-server/
