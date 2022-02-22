@@ -1,5 +1,7 @@
 # Server files for running a Longvinter server.
 
+If you have any trouble following the guide. Please send us a message in [Discord](https://discord.gg/SmPZ8hRqMV) we are more than happy to help you out!
+
 ### This guide is made with Ubuntu 20.04
 
 ## Requirements and prerequisites
@@ -84,6 +86,15 @@ AdminSteamID=76561198965966997
 ## Run the server
 Start the server with shell script
 - `sh ~/longvinter-linux-server/LongvinterServer.sh`
+
+If the console shows these lines at the bottom after startup your server has started corretly
+```
+[2022.02.22-12.51.34:514][ 13]LogOnline: Verbose: STEAM: FOnlineAsyncEventSteamServerConnectedGS ServerId: Server[0x1404CD1FF72E008]
+[2022.02.22-12.51.34:782][ 21]LogOnline: Verbose: STEAM: FOnlineAsyncEventSteamServerPolicyResponseGS Secure: 1
+[2022.02.22-12.51.34:849][ 23]LogOnline: Verbose: OSS: Async task 'FOnlineAsyncTaskSteamCreateServer bWasSuccessful: 1' succeeded in 2.828243 seconds
+[2022.02.22-12.51.34:849][ 23]LogOnlineSession: Warning: STEAM: Server setting ,TOTPLAYING_s:0 overflows Steam SetGameTags call
+[2022.02.22-12.51.34:849][ 23]LogOnlineSession: Warning: STEAM: Server setting ,ServerName_s:[EU] Uuvana 1 overflows Steam SetGameTags call
+```
 
 I have created an automated script that you can run to automatically update and restart a server. <br>Make sure you have nohup installed on your system.
 - `bash ~/longvinter-linux-server/server-autorun.sh`
