@@ -10,7 +10,7 @@ UpdateServer () {
         sleep 1
         echo "Starting server.."
         sudo chmod -R ugo+rwx /home/nilsson/longvinter-linux-server/
-        nohup bash ~/longvinter-linux-server/LongvinterServer.sh > ~/server-logs/longvinter.log &
+        bash ~/longvinter-linux-server/LongvinterServer.sh
 }
 
 cd ~/longvinter-linux-server
