@@ -5,14 +5,16 @@ If you have any trouble following the guide. Please send us a message in [Discor
 ### This guide is made with Ubuntu 20.04
 
 ## Requirements and prerequisites
-- a GIT installed into your system.
+- GIT installed in your system
+- GIT LFS installed in your system
+- SteamCMD installed in your system
 - Broadband internet connection
 - Router with the ability to port forward
 - Min. 2 GB RAM
 
 ## Installing GIT Large file system
 
-.Pak files are large and we need to install git lfs in order to download them
+.pak files are large and we need to install git lfs in order to download them
 
 Run the following commands:
 - `apt update`
