@@ -5,7 +5,8 @@ echo checking server status
 
 pidof bash  ~/longvinter-linux-server/LongvinterServer.sh
 echo $?
-if [[ $? -le 2 ]] ; then
-	bash ~/longvinter-linux-server/LongvinterServer.sh
+bash ~/longvinter-linux-server/LongvinterServer.sh
+if [[ $? -le 0 ]] ; then
+	
         echo "Restarting script"
 fi
