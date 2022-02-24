@@ -9,7 +9,7 @@ UpdateServer () {
         git pull "https://github.com/Uuvana-Studios/longvinter-linux-server.git" main
         sleep 1
         echo "Starting server.."
-        sudo chmod -R ugo+rwx /home/nilsson/longvinter-linux-server/
+        sudo chmod -R ugo+rwx ~/longvinter-linux-server/
         bash ~/longvinter-linux-server/LongvinterServer.sh
 }
 
