@@ -21,14 +21,15 @@ Run the following commands:
 - `apt install git-lfs`
 
 ## Installing Steam SDK
-Steam server browser needs steamsdk and for this we need to install steamCMD
+Steam server browser needs steamsdk and for this we need to install SteamCMD
 - `cd ~/` Make sure we are in home directory
-- `mkdir steamcmd` Make steam directory
+- `mkdir steamcmd` Makes SteamCMD directory
 - `cd steamcmd` Go to the created directory
 - `apt-get install lib32stdc++6` Install lib32std
-- `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Load SteamCmd
-- `tar -xvzf steamcmd_linux.tar.gz` Extract the SteamCmd 
-- `./steamcmd.sh` Run the Steam
+- `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Load SteamCMD
+- `tar -xvzf steamcmd_linux.tar.gz` Extract the SteamCMD
+- `./steamcmd.sh` Run the Steam CMD Shell
+
 Steam CMD will install updates automatically but we need to login to install 64bit sdk. 
 
 wait for the `Steam>` to appear and then you type following commands:
