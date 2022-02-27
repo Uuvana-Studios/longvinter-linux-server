@@ -14,24 +14,25 @@ If you have any trouble following the guide. Please send us a message in [Discor
 
 ## Installing GIT Large file system
 
-.pak files are large and we need to install git lfs in order to download them
+.pak files are large and we need to install Git Lfs in order to download them
 
 Run the following commands:
 - `apt update`
 - `apt install git-lfs`
 
 ## Installing Steam SDK
-Steam server browser needs steamsdk and for this we need to install steamCMD
-- `cd ~/` Make sure we are in home directory
-- `mkdir steamcmd` Make steam directory
-- `cd steamcmd` Go to the created directory
-- `apt-get install lib32stdc++6` Install lib32std
-- `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Load SteamCmd
-- `tar -xvzf steamcmd_linux.tar.gz` Extract the SteamCmd 
-- `./steamcmd.sh` Run the Steam
+The Steam server browser needs steamsdk and for this we need to install SteamCMD
+- `cd ~/` Makes sure we are in the home directory
+- `mkdir steamcmd` Makes SteamCMD directory
+- `cd steamcmd` Goes to the SteamCMD directory
+- `apt install lib32stdc++6` Install lib32std
+- `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Downloads SteamCMD Tar File.
+- `tar -xvzf steamcmd_linux.tar.gz` Extracts SteamCMD
+- `./steamcmd.sh` Runs the Steam CMD Shell
+
 Steam CMD will install updates automatically but we need to login to install 64bit sdk. 
 
-wait for the `Steam>` to appear and then you type following commands:
+Wait for the `Steam>` to appear and then you type following commands:
 - `login anonymous`
 - `app_update 1007`
 - `quit`
