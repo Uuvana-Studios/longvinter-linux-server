@@ -18,3 +18,4 @@ git pull
 ~/longvinter-linux-server/network-ports.sh
 # Starts the server.
 ~/longvinter-linux-server/server-autorun.sh
+
