@@ -1,4 +1,6 @@
 #!/bin/sh
+# Update firewall rules(If firewall is enabled)
+ufw allow 7777 27015 27016
 # Install Dependencies
 apt update && apt upgrade -y && apt install git git-lfs lib32stdc++6 -y
 # Install SteamCMD
