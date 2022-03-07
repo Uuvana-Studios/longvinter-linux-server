@@ -128,5 +128,10 @@ If the console shows these lines at the bottom after startup your server has sta
 [2022.02.22-12.51.34:849][ 23]LogOnlineSession: Warning: STEAM: Server setting ,ServerName_s:[EU] Uuvana 1 overflows Steam SetGameTags call
 ```
 
+## Updating the server
 We have created an automated script that you can run to automatically update and restart a server.
 - `bash /home/steam/longvinter-linux-server/LongvinterUpdate.sh`
+
+## Backing up your saves
+We have created an automated script that you can run to automatically backup and restart a server, for now it has to be run manually and it requires user input.
+- `bash /home/steam/longvinter-linux-server/LongvinterBackup.sh`
