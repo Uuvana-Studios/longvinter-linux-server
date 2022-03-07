@@ -46,14 +46,9 @@ The Steam server browser needs steamsdk and for this we need to install SteamCMD
 - `apt install lib32stdc++6` Install lib32std
 - `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Downloads SteamCMD Tar File.
 - `tar -xvzf steamcmd_linux.tar.gz` Extracts SteamCMD
-- `./steamcmd.sh` Runs the Steam CMD Shell
+- `./steamcmd.sh +force_install_dir . +login anonymous +app_update 1007 +quit'` Runs SteamCMD to login, install a app update and quit upon completion.
 
-Steam CMD will install updates automatically but we need to login to install 64bit sdk. 
-
-Wait for the `Steam>` to appear and then you type following commands:
-- `login anonymous`
-- `app_update 1007`
-- `quit`
+Steam CMD will install updates automatically and login to install 64-bit SDK.
 
 ### Moving SDK to right place
 
