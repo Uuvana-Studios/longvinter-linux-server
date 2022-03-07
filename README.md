@@ -68,12 +68,12 @@ Then we want to give permission for this folder to execute commands with
 - `sudo chmod -R ugo+rwx longvinter-linux-server/`
 
 After this we can open the required ports by executing the following commands:
--`sudo iptables -I INPUT -p udp --dport 7777 -j ACCEPT`
--`sudo iptables -I INPUT -p tcp --dport 7777 --syn -j ACCEPT`
--`sudo iptables -I INPUT -p udp --dport 27016 -j ACCEPT`
--`sudo iptables -I INPUT -p tcp --dport 27016 --syn -j ACCEPT`
--`sudo iptables -I INPUT -p udp --dport 27015 -j ACCEPT`
--`sudo iptables -I INPUT -p tcp --dport 27015 --syn -j ACCEPT`
+- `sudo iptables -I INPUT -p udp --dport 7777 -j ACCEPT`
+- `sudo iptables -I INPUT -p tcp --dport 7777 --syn -j ACCEPT`
+- `sudo iptables -I INPUT -p udp --dport 27016 -j ACCEPT`
+- `sudo iptables -I INPUT -p tcp --dport 27016 --syn -j ACCEPT`
+- `sudo iptables -I INPUT -p udp --dport 27015 -j ACCEPT`
+- `sudo iptables -I INPUT -p tcp --dport 27015 --syn -j ACCEPT`
 
 ## Customize the server
 
@@ -107,7 +107,7 @@ AdminSteamID=76561198965966997
 ### Start the server manually with shell script
 - `sh /home/steam/longvinter-linux-server/LongvinterServer.sh`
 
-### Start the server automatically with Systemd
+### Start the server automatically with Systemd (Recommended)
 - `$ cp /home/steam/longvinter-linux-server/longvinter.service /etc/systemd/system/longvinter.service`
 - `$ systemctl daemon-reload`
 
