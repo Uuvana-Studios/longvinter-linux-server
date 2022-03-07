@@ -114,6 +114,7 @@ AdminSteamID=76561198965966997
 Now, how to use it:
 - `$ systemctl start longvinter.service` (Starts the server)
 - `$ systemctl stop longvinter.service` (Stops the server)
+- `$ systemctl restart longvinter.service` (Restart the server, for example, if you made a change to Game.ini)
 - `$ systemctl enable longvinter.service` (Everytime you reboot the machine it starts on boot)
 - `$ systemctl status longvinter.service` (Checks the latest 20 lines on the server console)
 
