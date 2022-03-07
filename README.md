@@ -18,7 +18,7 @@ If you have any trouble following the guide. Please send us a message in [Discor
 
 Run the following commands according to your chosen system:
 
-**Ubuntu**
+**Ubuntu/Debian**
 - `$ apt update`
 - `$ apt install git git-lfs`
 
@@ -45,7 +45,7 @@ The Steam server browser needs steamsdk and for this we need to install SteamCMD
 - `apt install lib32stdc++6` Install lib32std
 - `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Downloads SteamCMD Tar File.
 - `tar -xvzf steamcmd_linux.tar.gz` Extracts SteamCMD
-- `./steamcmd.sh +force_install_dir . +login anonymous +app_update 1007 +quit'` Runs SteamCMD to login, install a app update and quit upon completion.
+- `./steamcmd.sh +force_install_dir . +login anonymous +app_update 1007 +quit` Runs SteamCMD to login, install a app update and quit upon completion.
 
 Steam CMD will install updates automatically and login to install 64-bit SDK.
 
