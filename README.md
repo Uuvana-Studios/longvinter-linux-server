@@ -103,8 +103,20 @@ AdminSteamID=76561198965966997
   - AdminSteamID=76561198965966997 11859676569976596
 
 ## Run the server
-Start the server with shell script
-- `sh ~/longvinter-linux-server/LongvinterServer.sh`
+
+### Start the server manually with shell script
+- `sh /home/steam/longvinter-linux-server/LongvinterServer.sh`
+
+### Start the server automatically with Systemd
+- `$ cp /home/steam/longvinter-linux-server/longvinter.service /etc/systemd/system/longvinter.service`
+- `$ systemctl daemon-reload`
+
+Now, how to use it:
+- `$ systemctl start longvinter.service` (Starts the server)
+- `$ systemctl stop longvinter.service` (Stops the server)
+- `$ systemctl enable longvinter.service` (Everytime you reboot the machine it starts on boot)
+- `$ systemctl status longvinter.service` (Checks the latest 20 lines on the server console)
+
 
 If the console shows these lines at the bottom after startup your server has started corretly
 ```
@@ -115,5 +127,5 @@ If the console shows these lines at the bottom after startup your server has sta
 [2022.02.22-12.51.34:849][ 23]LogOnlineSession: Warning: STEAM: Server setting ,ServerName_s:[EU] Uuvana 1 overflows Steam SetGameTags call
 ```
 
-I have created an automated script that you can run to automatically update and restart a server. <br>Make sure you have nohup installed on your system.
-- `bash ~/longvinter-linux-server/server-autorun.sh`
+We have created an automated script that you can run to automatically update and restart a server.
+- `bash /home/steam/longvinter-linux-server/LongvinterUpdate.sh`
