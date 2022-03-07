@@ -7,8 +7,8 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=steamcmd
-ExecStart=sh /home/steam/longvinter-linux-server/LongvinterServer.sh
+User=nilsson
+ExecStart=sh /home/nilsson/longvinter-linux-server/LongvinterServer.sh
 
 [Install]
 WantedBy=multi-user.target
