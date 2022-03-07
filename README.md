@@ -30,7 +30,6 @@ Run the following commands according to your chosen system:
 - `$ yum update`
 - `$ yum install git git-lfs`
 
-
 ## Creating a dedicated user
 
 - `$ useradd -m -d /home/steam steamcmd`
@@ -50,13 +49,12 @@ The Steam server browser needs steamsdk and for this we need to install SteamCMD
 
 Steam CMD will install updates automatically and login to install 64-bit SDK.
 
-### Moving SDK to right place
+### Copying SDK to right place
 
 We still need to move the sdk to default location where the server tries to 
 - `cd ~/.steam` Go to the steam folder
 - `mkdir sdk64` Create folder for the sdk
-- `mv ~/steamcmd/linux64/steamclient.so ~/.steam/sdk64/` Move the steamclient.so from SteamCmd to .steam/sdk64 folder
-
+- `cp ~/steamcmd/linux64/steamclient.so ~/.steam/sdk64/` Copy the steamclient.so from SteamCmd to .steam/sdk64 folder
 
  ## Installing the server.
 
@@ -69,8 +67,13 @@ Then we can clone the Linux repository
 Then we want to give permission for this folder to execute commands with
 - `sudo chmod -R ugo+rwx longvinter-linux-server/`
 
-After this we can open the required ports by executing the shell script inside the repository
--`bash longvinter-linux-server/network-ports.sh`
+After this we can open the required ports by executing the following commands:
+-`sudo iptables -I INPUT -p udp --dport 7777 -j ACCEPT`
+-`sudo iptables -I INPUT -p tcp --dport 7777 --syn -j ACCEPT`
+-`sudo iptables -I INPUT -p udp --dport 27016 -j ACCEPT`
+-`sudo iptables -I INPUT -p tcp --dport 27016 --syn -j ACCEPT`
+-`sudo iptables -I INPUT -p udp --dport 27015 -j ACCEPT`
+-`sudo iptables -I INPUT -p tcp --dport 27015 --syn -j ACCEPT`
 
 ## Customize the server
 
@@ -105,7 +108,7 @@ Start the server with shell script
 
 If the console shows these lines at the bottom after startup your server has started corretly
 ```
-[2022.02.22-12.51.34:514][ 13]LogOnline: Verbose: STEAM: FOnlineAsyncEventSteamServerConnectedGS ServerId: Server[0x1404CD1FF72E008]
+[2022.02.22-12.51.34:514][ 13]LogOnline: Verbose: STEAM: FOnlineAsyncEventSteamServerConnectedGS ServerId: Server[0x***************]
 [2022.02.22-12.51.34:782][ 21]LogOnline: Verbose: STEAM: FOnlineAsyncEventSteamServerPolicyResponseGS Secure: 1
 [2022.02.22-12.51.34:849][ 23]LogOnline: Verbose: OSS: Async task 'FOnlineAsyncTaskSteamCreateServer bWasSuccessful: 1' succeeded in 2.828243 seconds
 [2022.02.22-12.51.34:849][ 23]LogOnlineSession: Warning: STEAM: Server setting ,TOTPLAYING_s:0 overflows Steam SetGameTags call
