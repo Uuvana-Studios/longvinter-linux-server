@@ -16,26 +16,39 @@ If you have any trouble following the guide. Please send us a message in [Discor
 
 .pak files are large and we need to install Git Lfs in order to download them
 
-Run the following commands:
-- `apt update`
-- `apt install git-lfs`
+Run the following commands according to your chosen system:
+
+**Ubuntu**
+- `$ apt update`
+- `$ apt install git git-lfs`
+
+**Arch-Linux**
+- `$ pacman -Sy`
+- `$ pacman -S git git-lfs`
+
+**Fedora**
+- `$ yum update`
+- `$ yum install git git-lfs`
+
+
+## Creating a dedicated user
+
+- `$ useradd -m -d /home/steam steamcmd`
+- `$ passwd steamcmd` (Choose a stronge secure password)
+- `$ usermod -aG sudo steamcmd`
+- `$ su steamcmd`
 
 ## Installing Steam SDK
-The Steam server browser needs steamsdk and for this we need to install SteamCMD
+The Steam server browser needs steamsdk and for this we need to install SteamCMD, we will do this under the steamcmd user.
 - `cd ~/` Makes sure we are in the home directory
 - `mkdir steamcmd` Makes SteamCMD directory
 - `cd steamcmd` Goes to the SteamCMD directory
 - `apt install lib32stdc++6` Install lib32std
 - `wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz` Downloads SteamCMD Tar File.
 - `tar -xvzf steamcmd_linux.tar.gz` Extracts SteamCMD
-- `./steamcmd.sh` Runs the Steam CMD Shell
+- `./steamcmd.sh +force_install_dir . +login anonymous +app_update 1007 +quit'` Runs SteamCMD to login, install a app update and quit upon completion.
 
-Steam CMD will install updates automatically but we need to login to install 64bit sdk. 
-
-Wait for the `Steam>` to appear and then you type following commands:
-- `login anonymous`
-- `app_update 1007`
-- `quit`
+Steam CMD will install updates automatically and login to install 64-bit SDK.
 
 ### Moving SDK to right place
 
