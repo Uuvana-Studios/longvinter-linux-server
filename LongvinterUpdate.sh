@@ -2,15 +2,15 @@
 echo checking for updates
 
 UpdateServer () {
-	killall LongvinterServer.sh
-        echo "Server closed, now getting latest version"
+        systemctl is-active --quiet longvinter && echo "Server is running!"
+        sudo systemctl stop longvinter && echo "Server is now closed, now getting latest version..."
         git restore .
         sleep 1
         git pull "https://github.com/Uuvana-Studios/longvinter-linux-server.git" official
         sleep 1
-        echo "Starting server.."
-        sudo chmod -R ugo+rwx ~/longvinter-linux-server/
-        bash ~/longvinter-linux-server/LongvinterServer.sh
+        echo "Starting server..."
+        sudo chmod -R ugo+rwx /home/steam/longvinter-linux-server/
+        sudo systemctl start longvinter && echo "Server is now running!"
 }
 
 cd ~/longvinter-linux-server
