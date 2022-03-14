@@ -25,7 +25,7 @@ ReadWriteDirectories=/home/steam/longvinter-linux-server
 WorkingDirectory=/home/steam/longvinter-linux-server
 
 KillSignal=SIGCONT
-Sockets=minecraft.socket
+Sockets=longvinter.socket
 #EnvironmentFile=-/home/steam/longvinter-linux-server/unit.conf
 ExecStart=/bin/sh -c "exec /home/steam/longvinter-linux-server/LongvinterServer.sh </run/longvinter.control"
 
