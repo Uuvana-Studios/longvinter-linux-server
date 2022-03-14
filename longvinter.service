@@ -15,7 +15,7 @@ Nice=5
 Restart=always
 RestartSec=15
 
-ProtectHome=true
+ProtectHome=false
 ProtectSystem=full
 PrivateDevices=true
 NoNewPrivileges=true
