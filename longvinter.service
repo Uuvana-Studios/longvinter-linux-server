@@ -1,14 +1,32 @@
 [Unit]
 Description=Longvinter Server
-After=network.target
+Documentation=https://docs-server.longvinter.com
+
 StartLimitIntervalSec=0
+After=network.target
+Wants=network.target
 
 [Service]
 Type=simple
-Restart=always
-RestartSec=1
 User=steamcmd
-ExecStart=sh /home/steam/longvinter-linux-server/LongvinterServer.sh
+Group=steamcmd
+Nice=5
+
+Restart=always
+RestartSec=15
+
+ProtectHome=false
+ProtectSystem=full
+PrivateDevices=true
+NoNewPrivileges=true
+PrivateTmp=true
+InaccessibleDirectories=/root /sys /srv -/opt /media -/lost+found
+ReadWriteDirectories=/home/steam/longvinter-linux-server
+WorkingDirectory=/home/steam/longvinter-linux-server
+
+KillSignal=SIGCONT
+Sockets=longvinter.socket
+ExecStart=/bin/sh -c "exec /home/steam/longvinter-linux-server/LongvinterServer.sh"
 
 [Install]
 WantedBy=multi-user.target
