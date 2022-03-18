@@ -3,11 +3,11 @@
 CURRENTEPOCTIME=`date +"%s"`
 
 BackupFolder () {
-        if [[ -d /home/steam/longvinter-linux-server/Longvinter/Saved/Backup/ ]]
+        if [[ -d /home/steam/longvinter-linux-server/Longvinter/Backup/ ]]
         then
             echo "The backup folder exists on your filesystem."
         else
-                mkdir -p /home/steam/longvinter-linux-server/Longvinter/Saved/Backup
+                mkdir -p /home/steam/longvinter-linux-server/Longvinter/Backup
                 echo "The backfolder has been created on your filesystem."
         fi
 }
@@ -15,7 +15,7 @@ BackupFolder () {
 BackupServer () {
         systemctl is-active --quiet longvinter && echo "Server is running!"
         sudo systemctl stop longvinter && echo "Server is now closed, backing up..."
-        zip -r /home/steam/longvinter-linux-server/Longvinter/Saved/Backup/Saved-Backup-${CURRENTEPOCTIME}.zip /home/steam/longvinter-linux-server/Longvinter/Saved/* -x "**/Logs/*"
+        tar --exclude=/home/steam/longvinter-linux-server/Longvinter/Saved/Logs -cvzf /home/steam/longvinter-linux-server/Longvinter/Backup/Saved-Backup-${CURRENTEPOCTIME}.tar.gz /home/steam/longvinter-linux-server/Longvinter/Saved
         sleep 1
         echo "Starting server..."
         sudo chmod -R ugo+rwx /home/steam/longvinter-linux-server/
