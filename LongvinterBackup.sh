@@ -8,7 +8,7 @@ BackupFolder () {
             echo "The backup folder exists on your filesystem."
         else
                 mkdir -p /home/steam/longvinter-linux-server/Longvinter/Backup
-                echo "The backfolder has been created on your filesystem."
+                echo "The back up folder has been created on your filesystem."
         fi
 }
 
