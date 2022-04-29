@@ -6,6 +6,8 @@ UpdateServer () {
         sudo systemctl stop longvinter && echo "Server is now closed, now getting latest version..."
         git restore .
         sleep 1
+        git stash
+        sleep 1
         git pull "https://github.com/Uuvana-Studios/longvinter-linux-server.git" main
         sleep 1
         echo "Starting server..."
