@@ -18,7 +18,7 @@ cd ~/longvinter-linux-server
 git fetch
 
 if git merge-base --is-ancestor origin/main main ; then
-        echo "Nothing to update."
+        echo "Nothing to update.."
 else
         echo "Change found, updating server..."
         UpdateServer
