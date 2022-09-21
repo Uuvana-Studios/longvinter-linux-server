@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Checking for updates..."
+echo "Checking for updates.."
 
 UpdateServer () {
         systemctl is-active --quiet longvinter && echo "Server is running!"
