@@ -5,7 +5,7 @@ CURRENTEPOCTIME=`date +"%s"`
 BackupFolder () {
         if [[ -d /home/steam/longvinter-linux-server/Longvinter/Backup/ ]]
         then
-            echo "The backup folder exists on your filesystem."
+            echo "The backup folder exists on your filesystem"
         else
                 mkdir -p /home/steam/longvinter-linux-server/Longvinter/Backup
                 echo "The back up folder has been created on your filesystem."
