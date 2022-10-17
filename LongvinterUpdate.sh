@@ -10,7 +10,7 @@ UpdateServer () {
         sleep 1
         echo "Starting server..."
         sudo chmod -R ugo+rwx ~/longvinter-linux-server/
-        sudo systemctl start longvinter && echo "Server is now running!"
+        sudo systemctl start longvinter && echo "Server is now running"
 }
 
 cd ~/longvinter-linux-server
