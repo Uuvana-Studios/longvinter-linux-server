@@ -20,6 +20,6 @@ git fetch
 if git merge-base --is-ancestor origin/main main ; then
         echo "Nothing to update.."
 else
-        echo "Change found, updating server..."
+        echo "Change found, updating server.."
         UpdateServer
 fi
