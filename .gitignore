@@ -4,4 +4,5 @@ Longvinter/Saved/SaveGames
 Longvinter/Saved/Config/CrashReportClient
 *.debug
 *Game.ini
+Longvinter/Binaries/Linux/LongvinterServer-Linux-Shipping.sym
 *.sym
