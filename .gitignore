@@ -4,3 +4,4 @@ Longvinter/Saved/SaveGames
 Longvinter/Saved/Config/CrashReportClient
 *.debug
 *Game.ini
+*.sym
