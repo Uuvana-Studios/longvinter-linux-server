@@ -1,7 +1,30 @@
-# Server files for running a Linux Longvinter Server.
+# ⚠️ Repository Deprecated
 
-To learn how to setup a Linux server we recommend you use our official server documentation page at https://docs-server.longvinter.com - If you have any trouble following it. Please send us a message in [Discord](https://discord.gg/longvinter) we are more than happy to help you out!
+This repository is **no longer maintained**. We have migrated to distributing the Longvinter game server through **Steam**.
 
-Credits:
-- Docker by @tvandoorn
-- Systemd and Backup Script by @lisbonjoker
+---
+
+## New Server Setup
+
+Please visit our official documentation for the latest server setup instructions:
+
+**📚 [Longvinter Server Wiki](https://wiki.longvinter.com/server/server)**
+
+---
+
+## Need Help?
+
+If you encounter any issues setting up your server, we're here to help!
+
+Join our Discord community:  
+**💬 [Longvinter Discord](https://discord.gg/longvinter)**
+
+---
+
+## Credits
+
+Special thanks to our community contributors:
+
+- **Docker support** - [@tvandoorn](https://github.com/tvandoorn)
+- **Bash manager** - [@tsukasaroot](https://github.com/tsukasaroot)
+
